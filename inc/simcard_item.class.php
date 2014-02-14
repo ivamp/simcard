@@ -275,10 +275,10 @@ class PluginSimcardSimcard_Item extends CommonDBRelation{
    function getTabNameForItem(CommonGLPI $item, $withtemplate=0) {
 
       if (in_array(get_class($item), PluginSimcardSimcard_Item::getClasses())) {
-         return array(1 => $LANG['plugin_simcard']['profile'][1]);
+        // return array(1 =>$LANG ['plugin_simcard']['profile'][1]);
       } elseif (get_class($item) == 'PluginSimcardSimcard') {
          return _n('Associated item','Associated items',2);
-        // return _n('connect');
+         return _n('connect');
       }
       return '';
    }
